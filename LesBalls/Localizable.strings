@@ -1,0 +1,9 @@
+"ICON_BALL_BLEU1" = "rondBleu1.png";
+"ICON_BALL_BLEU2" = "rondBleu2.png";
+"ICON_BALL_BLEU_CIEL" = "rondBleuCiel.png";
+"ICON_BALL_JAUNE" = "rondJaune.png";
+"ICON_BALL_NOIR" = "rondNoir.png";
+"ICON_BALL_ROUGE" = "rondRouge.png";
+"ICON_VITESSE" = "speed.png";
+"ICON_MESURE" = "mesure.png";
+"ICON_COLLISION" = "collision.png";

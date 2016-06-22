@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E83DAD151D03143F000B2BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD141D03143F000B2BB5 /* AppDelegate.swift */; };
+		E83DAD1A1D03143F000B2BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD181D03143F000B2BB5 /* Main.storyboard */; };
+		E83DAD1D1D03143F000B2BB5 /* LesBalls.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD1B1D03143F000B2BB5 /* LesBalls.xcdatamodeld */; };
+		E83DAD1F1D03143F000B2BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD1E1D03143F000B2BB5 /* Assets.xcassets */; };
+		E83DAD221D03143F000B2BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD201D03143F000B2BB5 /* LaunchScreen.storyboard */; };
+		E83DAD2D1D03143F000B2BB5 /* LesBallsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD2C1D03143F000B2BB5 /* LesBallsTests.swift */; };
+		E83DAD381D03143F000B2BB5 /* LesBallsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD371D03143F000B2BB5 /* LesBallsUITests.swift */; };
+		E83DAD461D031484000B2BB5 /* AccueilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD451D031484000B2BB5 /* AccueilTableViewController.swift */; };
+		E83DAD4A1D03192B000B2BB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD491D03192B000B2BB5 /* MainViewController.swift */; };
+		E83DAD4C1D031A46000B2BB5 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD4B1D031A46000B2BB5 /* Ball.swift */; };
+		E83DAD4E1D0340CF000B2BB5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD4D1D0340CF000B2BB5 /* Localizable.strings */; };
+		E8CC5F3E1D1A7C7E0045340A /* TableViewCellWithStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC5F3C1D1A7C7E0045340A /* TableViewCellWithStepper.swift */; };
+		E8CC5F3F1D1A7C7E0045340A /* TableViewCellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC5F3D1D1A7C7E0045340A /* TableViewCellWithSwitch.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E83DAD291D03143F000B2BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E83DAD091D03143F000B2BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E83DAD101D03143F000B2BB5;
+			remoteInfo = LesBalls;
+		};
+		E83DAD341D03143F000B2BB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E83DAD091D03143F000B2BB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E83DAD101D03143F000B2BB5;
+			remoteInfo = LesBalls;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E83DAD111D03143F000B2BB5 /* LesBalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LesBalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83DAD141D03143F000B2BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E83DAD191D03143F000B2BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E83DAD1C1D03143F000B2BB5 /* LesBalls.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LesBalls.xcdatamodel; sourceTree = "<group>"; };
+		E83DAD1E1D03143F000B2BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E83DAD211D03143F000B2BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E83DAD231D03143F000B2BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E83DAD281D03143F000B2BB5 /* LesBallsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LesBallsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83DAD2C1D03143F000B2BB5 /* LesBallsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesBallsTests.swift; sourceTree = "<group>"; };
+		E83DAD2E1D03143F000B2BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E83DAD331D03143F000B2BB5 /* LesBallsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LesBallsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83DAD371D03143F000B2BB5 /* LesBallsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesBallsUITests.swift; sourceTree = "<group>"; };
+		E83DAD391D03143F000B2BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E83DAD451D031484000B2BB5 /* AccueilTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilTableViewController.swift; sourceTree = "<group>"; };
+		E83DAD491D03192B000B2BB5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E83DAD4B1D031A46000B2BB5 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		E83DAD4D1D0340CF000B2BB5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E8CC5F3C1D1A7C7E0045340A /* TableViewCellWithStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellWithStepper.swift; sourceTree = "<group>"; };
+		E8CC5F3D1D1A7C7E0045340A /* TableViewCellWithSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellWithSwitch.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E83DAD0E1D03143F000B2BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E83DAD251D03143F000B2BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E83DAD301D03143F000B2BB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E83DAD081D03143F000B2BB5 = {
+			isa = PBXGroup;
+			children = (
+				E83DAD131D03143F000B2BB5 /* LesBalls */,
+				E83DAD2B1D03143F000B2BB5 /* LesBallsTests */,
+				E83DAD361D03143F000B2BB5 /* LesBallsUITests */,
+				E83DAD121D03143F000B2BB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E83DAD121D03143F000B2BB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E83DAD111D03143F000B2BB5 /* LesBalls.app */,
+				E83DAD281D03143F000B2BB5 /* LesBallsTests.xctest */,
+				E83DAD331D03143F000B2BB5 /* LesBallsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E83DAD131D03143F000B2BB5 /* LesBalls */ = {
+			isa = PBXGroup;
+			children = (
+				E83DAD141D03143F000B2BB5 /* AppDelegate.swift */,
+				E83DAD451D031484000B2BB5 /* AccueilTableViewController.swift */,
+				E83DAD491D03192B000B2BB5 /* MainViewController.swift */,
+				E83DAD4B1D031A46000B2BB5 /* Ball.swift */,
+				E8CC5F3C1D1A7C7E0045340A /* TableViewCellWithStepper.swift */,
+				E8CC5F3D1D1A7C7E0045340A /* TableViewCellWithSwitch.swift */,
+				E83DAD181D03143F000B2BB5 /* Main.storyboard */,
+				E83DAD1E1D03143F000B2BB5 /* Assets.xcassets */,
+				E83DAD4D1D0340CF000B2BB5 /* Localizable.strings */,
+				E83DAD201D03143F000B2BB5 /* LaunchScreen.storyboard */,
+				E83DAD231D03143F000B2BB5 /* Info.plist */,
+				E83DAD1B1D03143F000B2BB5 /* LesBalls.xcdatamodeld */,
+			);
+			path = LesBalls;
+			sourceTree = "<group>";
+		};
+		E83DAD2B1D03143F000B2BB5 /* LesBallsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E83DAD2C1D03143F000B2BB5 /* LesBallsTests.swift */,
+				E83DAD2E1D03143F000B2BB5 /* Info.plist */,
+			);
+			path = LesBallsTests;
+			sourceTree = "<group>";
+		};
+		E83DAD361D03143F000B2BB5 /* LesBallsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E83DAD371D03143F000B2BB5 /* LesBallsUITests.swift */,
+				E83DAD391D03143F000B2BB5 /* Info.plist */,
+			);
+			path = LesBallsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E83DAD101D03143F000B2BB5 /* LesBalls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E83DAD3C1D03143F000B2BB5 /* Build configuration list for PBXNativeTarget "LesBalls" */;
+			buildPhases = (
+				E83DAD0D1D03143F000B2BB5 /* Sources */,
+				E83DAD0E1D03143F000B2BB5 /* Frameworks */,
+				E83DAD0F1D03143F000B2BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LesBalls;
+			productName = LesBalls;
+			productReference = E83DAD111D03143F000B2BB5 /* LesBalls.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E83DAD271D03143F000B2BB5 /* LesBallsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E83DAD3F1D03143F000B2BB5 /* Build configuration list for PBXNativeTarget "LesBallsTests" */;
+			buildPhases = (
+				E83DAD241D03143F000B2BB5 /* Sources */,
+				E83DAD251D03143F000B2BB5 /* Frameworks */,
+				E83DAD261D03143F000B2BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E83DAD2A1D03143F000B2BB5 /* PBXTargetDependency */,
+			);
+			name = LesBallsTests;
+			productName = LesBallsTests;
+			productReference = E83DAD281D03143F000B2BB5 /* LesBallsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E83DAD321D03143F000B2BB5 /* LesBallsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E83DAD421D03143F000B2BB5 /* Build configuration list for PBXNativeTarget "LesBallsUITests" */;
+			buildPhases = (
+				E83DAD2F1D03143F000B2BB5 /* Sources */,
+				E83DAD301D03143F000B2BB5 /* Frameworks */,
+				E83DAD311D03143F000B2BB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E83DAD351D03143F000B2BB5 /* PBXTargetDependency */,
+			);
+			name = LesBallsUITests;
+			productName = LesBallsUITests;
+			productReference = E83DAD331D03143F000B2BB5 /* LesBallsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E83DAD091D03143F000B2BB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ThomasNeyraut;
+				TargetAttributes = {
+					E83DAD101D03143F000B2BB5 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					E83DAD271D03143F000B2BB5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E83DAD101D03143F000B2BB5;
+					};
+					E83DAD321D03143F000B2BB5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E83DAD101D03143F000B2BB5;
+					};
+				};
+			};
+			buildConfigurationList = E83DAD0C1D03143F000B2BB5 /* Build configuration list for PBXProject "LesBalls" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E83DAD081D03143F000B2BB5;
+			productRefGroup = E83DAD121D03143F000B2BB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E83DAD101D03143F000B2BB5 /* LesBalls */,
+				E83DAD271D03143F000B2BB5 /* LesBallsTests */,
+				E83DAD321D03143F000B2BB5 /* LesBallsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E83DAD0F1D03143F000B2BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E83DAD221D03143F000B2BB5 /* LaunchScreen.storyboard in Resources */,
+				E83DAD4E1D0340CF000B2BB5 /* Localizable.strings in Resources */,
+				E83DAD1F1D03143F000B2BB5 /* Assets.xcassets in Resources */,
+				E83DAD1A1D03143F000B2BB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E83DAD261D03143F000B2BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E83DAD311D03143F000B2BB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E83DAD0D1D03143F000B2BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E83DAD4C1D031A46000B2BB5 /* Ball.swift in Sources */,
+				E8CC5F3F1D1A7C7E0045340A /* TableViewCellWithSwitch.swift in Sources */,
+				E83DAD461D031484000B2BB5 /* AccueilTableViewController.swift in Sources */,
+				E83DAD1D1D03143F000B2BB5 /* LesBalls.xcdatamodeld in Sources */,
+				E83DAD151D03143F000B2BB5 /* AppDelegate.swift in Sources */,
+				E8CC5F3E1D1A7C7E0045340A /* TableViewCellWithStepper.swift in Sources */,
+				E83DAD4A1D03192B000B2BB5 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E83DAD241D03143F000B2BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E83DAD2D1D03143F000B2BB5 /* LesBallsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E83DAD2F1D03143F000B2BB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E83DAD381D03143F000B2BB5 /* LesBallsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E83DAD2A1D03143F000B2BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E83DAD101D03143F000B2BB5 /* LesBalls */;
+			targetProxy = E83DAD291D03143F000B2BB5 /* PBXContainerItemProxy */;
+		};
+		E83DAD351D03143F000B2BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E83DAD101D03143F000B2BB5 /* LesBalls */;
+			targetProxy = E83DAD341D03143F000B2BB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E83DAD181D03143F000B2BB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E83DAD191D03143F000B2BB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E83DAD201D03143F000B2BB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E83DAD211D03143F000B2BB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E83DAD3A1D03143F000B2BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E83DAD3B1D03143F000B2BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E83DAD3D1D03143F000B2BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LesBalls/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBalls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E83DAD3E1D03143F000B2BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LesBalls/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBalls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E83DAD401D03143F000B2BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LesBallsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesBalls.app/LesBalls";
+			};
+			name = Debug;
+		};
+		E83DAD411D03143F000B2BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LesBallsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesBalls.app/LesBalls";
+			};
+			name = Release;
+		};
+		E83DAD431D03143F000B2BB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LesBallsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LesBalls;
+			};
+			name = Debug;
+		};
+		E83DAD441D03143F000B2BB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LesBallsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LesBalls;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E83DAD0C1D03143F000B2BB5 /* Build configuration list for PBXProject "LesBalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E83DAD3A1D03143F000B2BB5 /* Debug */,
+				E83DAD3B1D03143F000B2BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E83DAD3C1D03143F000B2BB5 /* Build configuration list for PBXNativeTarget "LesBalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E83DAD3D1D03143F000B2BB5 /* Debug */,
+				E83DAD3E1D03143F000B2BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E83DAD3F1D03143F000B2BB5 /* Build configuration list for PBXNativeTarget "LesBallsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E83DAD401D03143F000B2BB5 /* Debug */,
+				E83DAD411D03143F000B2BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E83DAD421D03143F000B2BB5 /* Build configuration list for PBXNativeTarget "LesBallsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E83DAD431D03143F000B2BB5 /* Debug */,
+				E83DAD441D03143F000B2BB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E83DAD1B1D03143F000B2BB5 /* LesBalls.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E83DAD1C1D03143F000B2BB5 /* LesBalls.xcdatamodel */,
+			);
+			currentVersion = E83DAD1C1D03143F000B2BB5 /* LesBalls.xcdatamodel */;
+			path = LesBalls.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E83DAD091D03143F000B2BB5 /* Project object */;
+}
