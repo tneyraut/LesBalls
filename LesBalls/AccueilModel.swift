@@ -8,9 +8,9 @@
 
 class AccueilModel
 {
-    var nombreDeBalls = 1
-    var vitesse = 1
+    var nbBalls = 1
+    var speed = 1
     var duplication = true
-    var taille = 10
-    var nombreMaxBalls = 20
+    var size = 10
+    var nbMaxBalls = 20
 }

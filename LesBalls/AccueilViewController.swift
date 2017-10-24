@@ -42,21 +42,7 @@ class AccueilViewController: BaseViewController, UITableViewDelegate, UITableVie
     {
         self.navigationController?.setToolbarHidden(false, animated:true)
         
-        self.navigationController?.toolbar.barTintColor = UIColor(red:0.439, green:0.776, blue:0.737, alpha:1)
-        
-        let shadow = NSShadow()
-        
-        shadow.shadowColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.8)
-        
-        shadow.shadowOffset = CGSize(width: 0, height: 1)
-        
-        let buttonGo = UIBarButtonItem(title:NSLocalizedString("ACCUEIL_VIEW_LAUNCH", comment:""), style:.plain, target:self, action:#selector(self.buttonGoActionListener))
-        
-        buttonGo.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red:245.0/255.0, green:245.0/255.0, blue:245.0/255.0, alpha:1.0), NSShadowAttributeName: shadow, NSFontAttributeName: UIFont(name:"HelveticaNeue-CondensedBlack", size:21.0)!], for:UIControlState())
-        
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target:nil, action:nil)
-        
-        self.navigationController?.toolbar.setItems([flexibleSpace, buttonGo, flexibleSpace], animated:true)
+        _ = addCenterButtonInToolBar(title: NSLocalizedString("ACCUEIL_VIEW_LAUNCH", comment:""), target: self, selector: #selector(self.buttonGoActionListener))
         
         super.viewDidAppear(animated)
     }
@@ -65,24 +51,25 @@ class AccueilViewController: BaseViewController, UITableViewDelegate, UITableVie
     {
         let mainViewController = MainViewController()
         
-        mainViewController.nombreDeBalls = accueilModel.nombreDeBalls
-        mainViewController.duplication = accueilModel.duplication
-        mainViewController.vitesse = accueilModel.vitesse
-        mainViewController.taille = accueilModel.taille
-        mainViewController.nombreMaxBalls = accueilModel.nombreMaxBalls
+        mainViewController.mainModel = MainModel(
+            nbBalls: accueilModel.nbBalls,
+            duplication: accueilModel.duplication,
+            speed: accueilModel.speed,
+            size: accueilModel.size,
+            nbMaxBalls: accueilModel.nbMaxBalls)
         
         self.navigationController?.pushViewController(mainViewController, animated:true)
     }
     
     @objc fileprivate func stepperNumberBallsActionListener(_ sender: UIStepper)
     {
-        accueilModel.nombreDeBalls = Int(sender.value)
+        accueilModel.nbBalls = Int(sender.value)
         self.tableView.reloadData()
     }
     
     @objc fileprivate func stepperVitesseActionListener(_ sender: UIStepper)
     {
-        accueilModel.vitesse = Int(sender.value)
+        accueilModel.speed = Int(sender.value)
         self.tableView.reloadData()
     }
     
@@ -94,13 +81,13 @@ class AccueilViewController: BaseViewController, UITableViewDelegate, UITableVie
     
     @objc fileprivate func stepperTailleActionListener(_ sender: UIStepper)
     {
-        accueilModel.taille = Int(sender.value)
+        accueilModel.size = Int(sender.value)
         self.tableView.reloadData()
     }
     
     @objc fileprivate func stepperNombreMaxBallsActionListener(_ sender: UIStepper)
     {
-        accueilModel.nombreMaxBalls = Int(sender.value)
+        accueilModel.nbMaxBalls = Int(sender.value)
         self.tableView.reloadData()
     }
     
@@ -143,47 +130,46 @@ class AccueilViewController: BaseViewController, UITableViewDelegate, UITableVie
         
         if (indexPath.row == 0)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.nombreDeBalls)
+            cell.label.text = (cell.label.text)! + String(accueilModel.nbBalls)
             
             cell.stepper.minimumValue = 1
             cell.stepper.maximumValue = 100
-            cell.stepper.value = Double(accueilModel.nombreDeBalls)
+            cell.stepper.value = Double(accueilModel.nbBalls)
             
             cell.stepper.addTarget(self, action:#selector(self.stepperNumberBallsActionListener(_:)), for:UIControlEvents.touchUpInside)
         }
         else if (indexPath.row == 1)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.vitesse)
+            cell.label.text = (cell.label.text)! + String(accueilModel.speed)
             
             cell.stepper.minimumValue = 1
             cell.stepper.maximumValue = 5
-            cell.stepper.value = Double(accueilModel.vitesse)
+            cell.stepper.value = Double(accueilModel.speed)
             
             cell.stepper.addTarget(self, action:#selector(self.stepperVitesseActionListener(_:)), for:UIControlEvents.touchUpInside)
         }
         else if (indexPath.row == 3)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.taille) + "x" + String(accueilModel.taille)
+            cell.label.text = (cell.label.text)! + String(accueilModel.size) + "x" + String(accueilModel.size)
             
             cell.stepper.minimumValue = 5
             cell.stepper.maximumValue = 50
-            cell.stepper.value = Double(accueilModel.taille)
+            cell.stepper.value = Double(accueilModel.size)
             cell.stepper.stepValue = 5
             
             cell.stepper.addTarget(self, action:#selector(self.stepperTailleActionListener(_:)), for:UIControlEvents.touchUpInside)
         }
         else if (indexPath.row == 4)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.nombreMaxBalls)
+            cell.label.text = (cell.label.text)! + String(accueilModel.nbMaxBalls)
             
             cell.stepper.minimumValue = 10
             cell.stepper.maximumValue = 10000
-            cell.stepper.value = Double(accueilModel.nombreMaxBalls)
+            cell.stepper.value = Double(accueilModel.nbMaxBalls)
             cell.stepper.stepValue = 10
             
             cell.stepper.addTarget(self, action:#selector(self.stepperNombreMaxBallsActionListener(_:)), for:UIControlEvents.touchUpInside)
         }
         return cell
     }
-    
 }

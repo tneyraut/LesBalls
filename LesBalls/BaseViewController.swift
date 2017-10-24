@@ -24,4 +24,23 @@ class BaseViewController : UIViewController
         
         self.navigationItem.backBarButtonItem = buttonPrevious
     }
+    
+    func addCenterButtonInToolBar(title: String, target: Any?, selector: Selector?) -> UIBarButtonItem
+    {
+        let shadow = NSShadow()
+        
+        shadow.shadowColor = AppColors.titleShadowColor
+        
+        shadow.shadowOffset = CGSize(width: 0, height: 1)
+        
+        let button = UIBarButtonItem(title: title, style: .plain, target:target, action: selector)
+        
+        button.setTitleTextAttributes([NSForegroundColorAttributeName: AppColors.whiteColor, NSShadowAttributeName: shadow, NSFontAttributeName: UIFont(name:"HelveticaNeue-CondensedBlack", size:21.0)!], for:UIControlState())
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target:nil, action:nil)
+        
+        self.navigationController?.toolbar.setItems([flexibleSpace, button, flexibleSpace], animated:true)
+        
+        return button
+    }
 }

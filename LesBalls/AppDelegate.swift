@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navigationController.navigationBar.barTintColor = AppColors.lightGreenColor
         
+        navigationController.toolbar.barTintColor = AppColors.lightGreenColor
+        
         let shadow = NSShadow()
         shadow.shadowColor = AppColors.titleShadowColor
         shadow.shadowOffset = CGSize(width: 0,height: 1)

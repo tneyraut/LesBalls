@@ -13,6 +13,7 @@
 		E813371C1F9F6C6400160494 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813371B1F9F6C6300160494 /* Constants.swift */; };
 		E813371E1F9F6C9500160494 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813371D1F9F6C9500160494 /* ItemModel.swift */; };
 		E81337201F9F6D4B00160494 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813371F1F9F6D4B00160494 /* BaseViewController.swift */; };
+		E81337221F9F79ED00160494 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81337211F9F79ED00160494 /* MainModel.swift */; };
 		E83DAD151D03143F000B2BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD141D03143F000B2BB5 /* AppDelegate.swift */; };
 		E83DAD1A1D03143F000B2BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD181D03143F000B2BB5 /* Main.storyboard */; };
 		E83DAD1D1D03143F000B2BB5 /* LesBalls.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD1B1D03143F000B2BB5 /* LesBalls.xcdatamodeld */; };
@@ -52,6 +53,7 @@
 		E813371B1F9F6C6300160494 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E813371D1F9F6C9500160494 /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		E813371F1F9F6D4B00160494 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E81337211F9F79ED00160494 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		E83DAD111D03143F000B2BB5 /* LesBalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LesBalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DAD141D03143F000B2BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E83DAD191D03143F000B2BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				E81337151F9F66B700160494 /* AccueilModel.swift */,
 				E813371D1F9F6C9500160494 /* ItemModel.swift */,
+				E81337211F9F79ED00160494 /* MainModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				E813371E1F9F6C9500160494 /* ItemModel.swift in Sources */,
 				E81337161F9F66B700160494 /* AccueilModel.swift in Sources */,
 				E83DAD151D03143F000B2BB5 /* AppDelegate.swift in Sources */,
+				E81337221F9F79ED00160494 /* MainModel.swift in Sources */,
 				E8CC5F3E1D1A7C7E0045340A /* TableViewCellWithStepper.swift in Sources */,
 				E813371A1F9F6BBB00160494 /* BaseTableViewCell.swift in Sources */,
 				E83DAD4A1D03192B000B2BB5 /* MainViewController.swift in Sources */,

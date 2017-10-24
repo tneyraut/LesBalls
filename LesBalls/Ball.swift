@@ -8,66 +8,90 @@
 
 import UIKit
 
-class Ball: NSObject {
+class Ball: NSObject
+{
+    fileprivate var color : String?
     
-    fileprivate var color = ""
+    fileprivate var speed : Int?
+    fileprivate var speedX : Double?
+    fileprivate var speedY : Double?
     
-    fileprivate var vitesse = 1
-    fileprivate var vitesseX = 0.0
-    fileprivate var vitesseY = 0.0
+    fileprivate var duplication : Bool?
     
-    fileprivate var duplication = false
-    
-    fileprivate var taille = 10
+    fileprivate var size : Int?
     
     fileprivate var timer = Timer()
     
     fileprivate let imageView = UIImageView()
     
-    fileprivate var viewController = MainViewController()
+    fileprivate var viewController : MainViewController?
     
-    func initBall(_ vitesse: Int, duplication: Bool, taille: Int, viewController: MainViewController)
+    init(speed: Int, duplication: Bool, size: Int, viewController: MainViewController)
     {
-        self.vitesse = vitesse
+        self.speed = speed
         self.duplication = duplication
-        self.taille = taille
+        self.size = size
         self.viewController = viewController
-        self.viewController.addBallToBallsArray(self)
-        self.setColor()
-        self.imageView.frame = CGRect(x: self.viewController.view.frame.size.width / 2, y: (self.viewController.view.frame.size.height - self.viewController.navigationController!.navigationBar.frame.size.height - (self.viewController.navigationController?.toolbar.frame.size.height)!) / 2, width: CGFloat(self.taille), height: CGFloat(self.taille))
-        self.imageView.image = UIImage(named: NSLocalizedString("ICON_BALL_" + self.color, comment:""))
-        self.viewController.view.addSubview(self.imageView)
-        self.setVitesse()
-        self.timer = Timer.scheduledTimer(timeInterval: 0.01 / Double(self.vitesse), target: self, selector: #selector(self.deplacement), userInfo: nil, repeats: true)
+        
+        self.imageView.frame = CGRect(
+            x: (self.viewController?.view.frame.size.width)! / 2,
+            y: ((self.viewController?.view.frame.size.height)! - (self.viewController?.navigationController!.navigationBar.frame.size.height)! - (self.viewController?.navigationController?.toolbar.frame.size.height)!) / 2,
+            width: CGFloat(self.size!),
+            height: CGFloat(self.size!))
+        
+        self.viewController?.view.addSubview(self.imageView)
     }
     
-    @objc fileprivate func deplacement()
+    internal func setAndLaunchAnimation()
     {
-        let x = Double(self.imageView.frame.origin.x) + self.vitesseX
-        let y = Double(self.imageView.frame.origin.y) + self.vitesseY
+        self.viewController?.addBallToBallsArray(self)
+        
+        self.setColor()
+        
+        self.imageView.image = UIImage(named: NSLocalizedString("ICON_BALL_" + self.color!, comment:""))
+        
+        self.setSpeed()
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 0.01 / Double(self.speed!), target: self, selector: #selector(self.move), userInfo: nil, repeats: true)
+    }
+    
+    @objc fileprivate func move()
+    {
+        let x = Double(self.imageView.frame.origin.x) + self.speedX!
+        let y = Double(self.imageView.frame.origin.y) + self.speedY!
         
         self.imageView.frame = CGRect(x: CGFloat(x), y: CGFloat(y), width: self.imageView.frame.size.width, height: self.imageView.frame.size.height)
-        if (self.aLaFrontiereHautOuBas())
+        if self.aLaFrontiereHautOuBas()
         {
-            self.vitesseY = -self.vitesseY
-            if (self.duplication && self.viewController.getBallsArrayCount() < self.viewController.nombreMaxBalls)
+            self.speedY = -self.speedY!
+            if self.duplication! && (self.viewController?.getBallsArrayCount())! < (self.viewController?.mainModel?.nbMaxBalls)!
             {
-                let ball = Ball()
-                ball.initBall(self.vitesse, duplication: self.duplication, taille: self.taille, viewController: self.viewController)
+                let ball = Ball(
+                    speed: self.speed!,
+                    duplication: self.duplication!,
+                    size: self.size!,
+                    viewController: self.viewController!)
+                
+                ball.setAndLaunchAnimation()
             }
         }
         if (self.aLaFrontiereGaucheOuDroite())
         {
-            self.vitesseX = -self.vitesseX
-            if (self.duplication  && self.viewController.getBallsArrayCount() < self.viewController.nombreMaxBalls)
+            self.speedX = -self.speedX!
+            if self.duplication!  && self.viewController!.getBallsArrayCount() < (self.viewController?.mainModel?.nbMaxBalls)!
             {
-                let ball = Ball()
-                ball.initBall(self.vitesse, duplication: self.duplication, taille: self.taille, viewController: self.viewController)
+                let ball = Ball(
+                    speed: self.speed!,
+                    duplication: self.duplication!,
+                    size: self.size!,
+                    viewController: self.viewController!)
+                
+                ball.setAndLaunchAnimation()
             }
         }
     }
     
-    fileprivate func setVitesse()
+    fileprivate func setSpeed()
     {
         var signeX = 1.0
         var signeY = 1.0
@@ -79,15 +103,15 @@ class Ball: NSObject {
         {
             signeY = -1.0
         }
-        self.vitesseX = signeX * (Double(arc4random_uniform(10)) + 1.0) / 10.0
-        self.vitesseY = signeY * (Double(arc4random_uniform(10)) + 1.0) / 10.0
-        while (self.vitesseX == 0.0)
+        self.speedX = signeX * (Double(arc4random_uniform(10)) + 1.0) / 10.0
+        self.speedY = signeY * (Double(arc4random_uniform(10)) + 1.0) / 10.0
+        while (self.speedX == 0.0)
         {
-            self.vitesseX = signeX * (Double(arc4random_uniform(10)) + 1.0) / 10.0
+            self.speedX = signeX * (Double(arc4random_uniform(10)) + 1.0) / 10.0
         }
-        while (self.vitesseY == 0.0)
+        while (self.speedY == 0.0)
         {
-            self.vitesseY = signeY * (Double(arc4random_uniform(10)) + 1.0) / 10.0
+            self.speedY = signeY * (Double(arc4random_uniform(10)) + 1.0) / 10.0
         }
     }
     
@@ -122,17 +146,16 @@ class Ball: NSObject {
     
     fileprivate func aLaFrontiereGaucheOuDroite() -> Bool
     {
-        return (self.imageView.frame.origin.x + self.imageView.frame.size.height >= self.viewController.view.frame.size.width || self.imageView.frame.origin.x <= 0)
+        return self.imageView.frame.origin.x + self.imageView.frame.size.height >= self.viewController!.view.frame.size.width || self.imageView.frame.origin.x <= 0
     }
     
     fileprivate func aLaFrontiereHautOuBas() -> Bool
     {
-        return (self.imageView.frame.origin.y + self.imageView.frame.size.height >= (self.viewController.view.frame.size.height - (self.viewController.navigationController?.toolbar.frame.size.height)!) || self.imageView.frame.origin.y <= self.viewController.navigationController!.navigationBar.frame.size.height + 20.0)
+        return self.imageView.frame.origin.y + self.imageView.frame.size.height >= (self.viewController!.view.frame.size.height - (self.viewController!.navigationController?.toolbar.frame.size.height)!) || self.imageView.frame.origin.y <= self.viewController!.navigationController!.navigationBar.frame.size.height + 20.0
     }
     
-    func stopAnimating()
+    internal func stopAnimating()
     {
         self.timer.invalidate()
     }
-    
 }
