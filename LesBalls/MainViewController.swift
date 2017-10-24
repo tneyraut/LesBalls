@@ -20,9 +20,9 @@ class MainViewController: UIViewController {
     
     internal var nombreMaxBalls = 20
     
-    private let ballsArray = NSMutableArray()
+    fileprivate let ballsArray = NSMutableArray()
     
-    let compteur = UIBarButtonItem(title:"Compteur : ", style:.Plain, target:nil, action:nil)
+    let compteur = UIBarButtonItem(title:"Compteur : ", style:.plain, target:nil, action:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +34,10 @@ class MainViewController: UIViewController {
         
         let shadow = NSShadow()
         shadow.shadowColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.8)
-        shadow.shadowOffset = CGSizeMake(0, 1)
+        shadow.shadowOffset = CGSize(width: 0, height: 1)
         
-        let buttonPrevious = UIBarButtonItem(title:"Retour", style:UIBarButtonItemStyle.Done, target:nil, action:nil)
-        buttonPrevious.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red:245.0/255.0, green:245.0/255.0, blue:245.0/255.0, alpha:1.0), NSShadowAttributeName: shadow, NSFontAttributeName: UIFont(name:"HelveticaNeue-CondensedBlack", size:21.0)!], forState:UIControlState.Normal)
+        let buttonPrevious = UIBarButtonItem(title:"Retour", style:UIBarButtonItemStyle.done, target:nil, action:nil)
+        buttonPrevious.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red:245.0/255.0, green:245.0/255.0, blue:245.0/255.0, alpha:1.0), NSShadowAttributeName: shadow, NSFontAttributeName: UIFont(name:"HelveticaNeue-CondensedBlack", size:21.0)!], for:UIControlState())
         
         self.navigationItem.backBarButtonItem = buttonPrevious
         
@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.setToolbarHidden(false, animated:true)
         
         self.navigationController?.toolbar.barTintColor = UIColor(red:0.439, green:0.776, blue:0.737, alpha:1)
@@ -59,26 +59,26 @@ class MainViewController: UIViewController {
         
         shadow.shadowColor = UIColor(red:0.0, green:0.0, blue:0.0, alpha:0.8)
         
-        shadow.shadowOffset = CGSizeMake(0, 1)
+        shadow.shadowOffset = CGSize(width: 0, height: 1)
         
         self.compteur.title = "Compteur : " + String(self.ballsArray.count)
         
-        self.compteur.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red:245.0/255.0, green:245.0/255.0, blue:245.0/255.0, alpha:1.0), NSShadowAttributeName: shadow, NSFontAttributeName: UIFont(name:"HelveticaNeue-CondensedBlack", size:21.0)!], forState:UIControlState.Normal)
+        self.compteur.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red:245.0/255.0, green:245.0/255.0, blue:245.0/255.0, alpha:1.0), NSShadowAttributeName: shadow, NSFontAttributeName: UIFont(name:"HelveticaNeue-CondensedBlack", size:21.0)!], for:UIControlState())
         
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target:nil, action:nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target:nil, action:nil)
         
         self.navigationController?.toolbar.setItems([flexibleSpace, self.compteur, flexibleSpace], animated:true)
         
         super.viewDidAppear(animated)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.clearAllBalls()
         
         super.viewWillDisappear(animated)
     }
     
-    private func addBalls()
+    fileprivate func addBalls()
     {
         var i = 0
         while (i < self.nombreDeBalls && self.ballsArray.count < self.nombreMaxBalls)
@@ -89,7 +89,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    @objc private func touch()
+    @objc fileprivate func touch()
     {
         if (self.ballsArray.count < self.nombreMaxBalls)
         {
@@ -98,13 +98,13 @@ class MainViewController: UIViewController {
         }
     }
 
-    func addBallToBallsArray(ball: Ball)
+    func addBallToBallsArray(_ ball: Ball)
     {
-        self.ballsArray.addObject(ball)
+        self.ballsArray.add(ball)
         self.compteur.title = "Compteur : " + String(self.ballsArray.count)
     }
     
-    private func clearAllBalls()
+    fileprivate func clearAllBalls()
     {
         var i = 0
         while (i < self.ballsArray.count)

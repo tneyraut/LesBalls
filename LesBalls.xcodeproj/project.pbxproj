@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81337161F9F66B700160494 /* AccueilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81337151F9F66B700160494 /* AccueilModel.swift */; };
+		E81337181F9F6B3100160494 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81337171F9F6B3100160494 /* AppColors.swift */; };
+		E813371A1F9F6BBB00160494 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81337191F9F6BBB00160494 /* BaseTableViewCell.swift */; };
+		E813371C1F9F6C6400160494 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813371B1F9F6C6300160494 /* Constants.swift */; };
+		E813371E1F9F6C9500160494 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813371D1F9F6C9500160494 /* ItemModel.swift */; };
+		E81337201F9F6D4B00160494 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813371F1F9F6D4B00160494 /* BaseViewController.swift */; };
 		E83DAD151D03143F000B2BB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD141D03143F000B2BB5 /* AppDelegate.swift */; };
 		E83DAD1A1D03143F000B2BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD181D03143F000B2BB5 /* Main.storyboard */; };
 		E83DAD1D1D03143F000B2BB5 /* LesBalls.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD1B1D03143F000B2BB5 /* LesBalls.xcdatamodeld */; };
@@ -14,7 +20,7 @@
 		E83DAD221D03143F000B2BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD201D03143F000B2BB5 /* LaunchScreen.storyboard */; };
 		E83DAD2D1D03143F000B2BB5 /* LesBallsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD2C1D03143F000B2BB5 /* LesBallsTests.swift */; };
 		E83DAD381D03143F000B2BB5 /* LesBallsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD371D03143F000B2BB5 /* LesBallsUITests.swift */; };
-		E83DAD461D031484000B2BB5 /* AccueilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD451D031484000B2BB5 /* AccueilTableViewController.swift */; };
+		E83DAD461D031484000B2BB5 /* AccueilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD451D031484000B2BB5 /* AccueilViewController.swift */; };
 		E83DAD4A1D03192B000B2BB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD491D03192B000B2BB5 /* MainViewController.swift */; };
 		E83DAD4C1D031A46000B2BB5 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DAD4B1D031A46000B2BB5 /* Ball.swift */; };
 		E83DAD4E1D0340CF000B2BB5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E83DAD4D1D0340CF000B2BB5 /* Localizable.strings */; };
@@ -40,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E81337151F9F66B700160494 /* AccueilModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilModel.swift; sourceTree = "<group>"; };
+		E81337171F9F6B3100160494 /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		E81337191F9F6BBB00160494 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		E813371B1F9F6C6300160494 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E813371D1F9F6C9500160494 /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		E813371F1F9F6D4B00160494 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E83DAD111D03143F000B2BB5 /* LesBalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LesBalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DAD141D03143F000B2BB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E83DAD191D03143F000B2BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,7 +65,7 @@
 		E83DAD331D03143F000B2BB5 /* LesBallsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LesBallsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DAD371D03143F000B2BB5 /* LesBallsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesBallsUITests.swift; sourceTree = "<group>"; };
 		E83DAD391D03143F000B2BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E83DAD451D031484000B2BB5 /* AccueilTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilTableViewController.swift; sourceTree = "<group>"; };
+		E83DAD451D031484000B2BB5 /* AccueilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilViewController.swift; sourceTree = "<group>"; };
 		E83DAD491D03192B000B2BB5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E83DAD4B1D031A46000B2BB5 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		E83DAD4D1D0340CF000B2BB5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -86,6 +98,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E813370F1F9F642800160494 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E813371F1F9F6D4B00160494 /* BaseViewController.swift */,
+				E83DAD451D031484000B2BB5 /* AccueilViewController.swift */,
+				E83DAD491D03192B000B2BB5 /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E81337101F9F643B00160494 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E83DAD4B1D031A46000B2BB5 /* Ball.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E81337111F9F644300160494 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				E81337191F9F6BBB00160494 /* BaseTableViewCell.swift */,
+				E8CC5F3C1D1A7C7E0045340A /* TableViewCellWithStepper.swift */,
+				E8CC5F3D1D1A7C7E0045340A /* TableViewCellWithSwitch.swift */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		E81337121F9F647200160494 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				E83DAD4D1D0340CF000B2BB5 /* Localizable.strings */,
+			);
+			name = Localizations;
+			sourceTree = "<group>";
+		};
+		E81337131F9F647E00160494 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E83DAD181D03143F000B2BB5 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E81337141F9F66A500160494 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E81337151F9F66B700160494 /* AccueilModel.swift */,
+				E813371D1F9F6C9500160494 /* ItemModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		E83DAD081D03143F000B2BB5 = {
 			isa = PBXGroup;
 			children = (
@@ -109,15 +174,16 @@
 		E83DAD131D03143F000B2BB5 /* LesBalls */ = {
 			isa = PBXGroup;
 			children = (
+				E81337141F9F66A500160494 /* Models */,
+				E81337111F9F644300160494 /* Controls */,
+				E81337101F9F643B00160494 /* Resources */,
+				E813370F1F9F642800160494 /* ViewControllers */,
+				E81337131F9F647E00160494 /* Views */,
+				E81337121F9F647200160494 /* Localizations */,
 				E83DAD141D03143F000B2BB5 /* AppDelegate.swift */,
-				E83DAD451D031484000B2BB5 /* AccueilTableViewController.swift */,
-				E83DAD491D03192B000B2BB5 /* MainViewController.swift */,
-				E83DAD4B1D031A46000B2BB5 /* Ball.swift */,
-				E8CC5F3C1D1A7C7E0045340A /* TableViewCellWithStepper.swift */,
-				E8CC5F3D1D1A7C7E0045340A /* TableViewCellWithSwitch.swift */,
-				E83DAD181D03143F000B2BB5 /* Main.storyboard */,
+				E81337171F9F6B3100160494 /* AppColors.swift */,
+				E813371B1F9F6C6300160494 /* Constants.swift */,
 				E83DAD1E1D03143F000B2BB5 /* Assets.xcassets */,
-				E83DAD4D1D0340CF000B2BB5 /* Localizable.strings */,
 				E83DAD201D03143F000B2BB5 /* LaunchScreen.storyboard */,
 				E83DAD231D03143F000B2BB5 /* Info.plist */,
 				E83DAD1B1D03143F000B2BB5 /* LesBalls.xcdatamodeld */,
@@ -211,13 +277,17 @@
 				TargetAttributes = {
 					E83DAD101D03143F000B2BB5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 774FGZN5LT;
+						LastSwiftMigration = 0820;
 					};
 					E83DAD271D03143F000B2BB5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = E83DAD101D03143F000B2BB5;
 					};
 					E83DAD321D03143F000B2BB5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = E83DAD101D03143F000B2BB5;
 					};
 				};
@@ -275,12 +345,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81337201F9F6D4B00160494 /* BaseViewController.swift in Sources */,
+				E81337181F9F6B3100160494 /* AppColors.swift in Sources */,
+				E813371C1F9F6C6400160494 /* Constants.swift in Sources */,
 				E83DAD4C1D031A46000B2BB5 /* Ball.swift in Sources */,
 				E8CC5F3F1D1A7C7E0045340A /* TableViewCellWithSwitch.swift in Sources */,
-				E83DAD461D031484000B2BB5 /* AccueilTableViewController.swift in Sources */,
+				E83DAD461D031484000B2BB5 /* AccueilViewController.swift in Sources */,
 				E83DAD1D1D03143F000B2BB5 /* LesBalls.xcdatamodeld in Sources */,
+				E813371E1F9F6C9500160494 /* ItemModel.swift in Sources */,
+				E81337161F9F66B700160494 /* AccueilModel.swift in Sources */,
 				E83DAD151D03143F000B2BB5 /* AppDelegate.swift in Sources */,
 				E8CC5F3E1D1A7C7E0045340A /* TableViewCellWithStepper.swift in Sources */,
+				E813371A1F9F6BBB00160494 /* BaseTableViewCell.swift in Sources */,
 				E83DAD4A1D03192B000B2BB5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,10 +501,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LesBalls/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBalls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -436,10 +516,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LesBalls/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBalls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -451,6 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesBalls.app/LesBalls";
 			};
 			name = Debug;
@@ -463,6 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LesBalls.app/LesBalls";
 			};
 			name = Release;
@@ -474,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LesBalls;
 			};
 			name = Debug;
@@ -485,6 +572,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ThomasNeyraut.iOS.LesBallsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LesBalls;
 			};
 			name = Release;

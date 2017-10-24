@@ -10,23 +10,23 @@ import UIKit
 
 class Ball: NSObject {
     
-    private var color = ""
+    fileprivate var color = ""
     
-    private var vitesse = 1
-    private var vitesseX = 0.0
-    private var vitesseY = 0.0
+    fileprivate var vitesse = 1
+    fileprivate var vitesseX = 0.0
+    fileprivate var vitesseY = 0.0
     
-    private var duplication = false
+    fileprivate var duplication = false
     
-    private var taille = 10
+    fileprivate var taille = 10
     
-    private var timer = NSTimer()
+    fileprivate var timer = Timer()
     
-    private let imageView = UIImageView()
+    fileprivate let imageView = UIImageView()
     
-    private var viewController = MainViewController()
+    fileprivate var viewController = MainViewController()
     
-    func initBall(vitesse: Int, duplication: Bool, taille: Int, viewController: MainViewController)
+    func initBall(_ vitesse: Int, duplication: Bool, taille: Int, viewController: MainViewController)
     {
         self.vitesse = vitesse
         self.duplication = duplication
@@ -34,19 +34,19 @@ class Ball: NSObject {
         self.viewController = viewController
         self.viewController.addBallToBallsArray(self)
         self.setColor()
-        self.imageView.frame = CGRectMake(self.viewController.view.frame.size.width / 2, (self.viewController.view.frame.size.height - self.viewController.navigationController!.navigationBar.frame.size.height - (self.viewController.navigationController?.toolbar.frame.size.height)!) / 2, CGFloat(self.taille), CGFloat(self.taille))
+        self.imageView.frame = CGRect(x: self.viewController.view.frame.size.width / 2, y: (self.viewController.view.frame.size.height - self.viewController.navigationController!.navigationBar.frame.size.height - (self.viewController.navigationController?.toolbar.frame.size.height)!) / 2, width: CGFloat(self.taille), height: CGFloat(self.taille))
         self.imageView.image = UIImage(named: NSLocalizedString("ICON_BALL_" + self.color, comment:""))
         self.viewController.view.addSubview(self.imageView)
         self.setVitesse()
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.01 / Double(self.vitesse), target: self, selector: #selector(self.deplacement), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.01 / Double(self.vitesse), target: self, selector: #selector(self.deplacement), userInfo: nil, repeats: true)
     }
     
-    @objc private func deplacement()
+    @objc fileprivate func deplacement()
     {
         let x = Double(self.imageView.frame.origin.x) + self.vitesseX
         let y = Double(self.imageView.frame.origin.y) + self.vitesseY
         
-        self.imageView.frame = CGRectMake(CGFloat(x), CGFloat(y), self.imageView.frame.size.width, self.imageView.frame.size.height)
+        self.imageView.frame = CGRect(x: CGFloat(x), y: CGFloat(y), width: self.imageView.frame.size.width, height: self.imageView.frame.size.height)
         if (self.aLaFrontiereHautOuBas())
         {
             self.vitesseY = -self.vitesseY
@@ -67,7 +67,7 @@ class Ball: NSObject {
         }
     }
     
-    private func setVitesse()
+    fileprivate func setVitesse()
     {
         var signeX = 1.0
         var signeY = 1.0
@@ -91,7 +91,7 @@ class Ball: NSObject {
         }
     }
     
-    private func setColor()
+    fileprivate func setColor()
     {
         let aColor = arc4random_uniform(6)
         if (aColor == 0)
@@ -120,12 +120,12 @@ class Ball: NSObject {
         }
     }
     
-    private func aLaFrontiereGaucheOuDroite() -> Bool
+    fileprivate func aLaFrontiereGaucheOuDroite() -> Bool
     {
         return (self.imageView.frame.origin.x + self.imageView.frame.size.height >= self.viewController.view.frame.size.width || self.imageView.frame.origin.x <= 0)
     }
     
-    private func aLaFrontiereHautOuBas() -> Bool
+    fileprivate func aLaFrontiereHautOuBas() -> Bool
     {
         return (self.imageView.frame.origin.y + self.imageView.frame.size.height >= (self.viewController.view.frame.size.height - (self.viewController.navigationController?.toolbar.frame.size.height)!) || self.imageView.frame.origin.y <= self.viewController.navigationController!.navigationBar.frame.size.height + 20.0)
     }
