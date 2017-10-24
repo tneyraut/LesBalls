@@ -14,19 +14,38 @@ class AccueilViewController: BaseViewController, UITableViewDelegate, UITableVie
     
     fileprivate var accueilModel = AccueilModel()
     
-    fileprivate let itemsArray: NSArray =
-        [NSLocalizedString("ACCUEIL_VIEW_NB_BALLS", comment:""),
-         NSLocalizedString("ACCUEIL_VIEW_SPEED", comment:""),
-         NSLocalizedString("ACCUEIL_VIEW_DUPLICATION", comment:""),
-         NSLocalizedString("ACCUEIL_VIEW_SIZE", comment:""),
-         NSLocalizedString("ACCUEIL_VIEW_NB_MAX_BALLS", comment:"")]
-    
-    fileprivate let imagesArray: NSArray =
-        [NSLocalizedString("ICON_BALL_BLEU1", comment:""),
-         NSLocalizedString("ICON_VITESSE", comment:""),
-         NSLocalizedString("ICON_BALL_BLEU1", comment:""),
-         NSLocalizedString("ICON_MESURE", comment:""),
-         NSLocalizedString("ICON_BALL_BLEU1", comment:"")]
+    fileprivate let itemsArray: [ItemModel] = [
+        ItemModel(
+            title: NSLocalizedString("ACCUEIL_VIEW_NB_BALLS", comment:""),
+            imageName: NSLocalizedString("ICON_BALL_BLEU1", comment:""),
+            stepValue: Constants.stepNbBalls,
+            minValue: Constants.minNbBalls,
+            maxValue: Constants.maxNbBalls),
+        ItemModel(
+            title: NSLocalizedString("ACCUEIL_VIEW_SPEED", comment:""),
+            imageName: NSLocalizedString("ICON_VITESSE", comment:""),
+            stepValue: Constants.stepSpeed,
+            minValue: Constants.minSpeed,
+            maxValue: Constants.maxSpeed),
+        ItemModel(
+            title: NSLocalizedString("ACCUEIL_VIEW_DUPLICATION", comment:""),
+            imageName: NSLocalizedString("ICON_BALL_BLEU1", comment:""),
+            stepValue: 0,
+            minValue: 0,
+            maxValue: 0),
+        ItemModel(
+            title: NSLocalizedString("ACCUEIL_VIEW_SIZE", comment:""),
+            imageName: NSLocalizedString("ICON_MESURE", comment:""),
+            stepValue: Constants.stepSize,
+            minValue: Constants.minSize,
+            maxValue: Constants.maxSize),
+        ItemModel(
+            title: NSLocalizedString("ACCUEIL_VIEW_NB_MAX_BALLS", comment:""),
+            imageName: NSLocalizedString("ICON_BALL_BLEU1", comment:""),
+            stepValue: Constants.stepNbMaxBalls,
+            minValue: Constants.minNbMaxBalls,
+            maxValue: Constants.maxNbMaxBalls)
+    ]
     
     override func viewDidLoad()
     {
@@ -105,15 +124,15 @@ class AccueilViewController: BaseViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        let item = self.itemsArray[indexPath.row]
+        
         if (indexPath.row == 2)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.switchCellId, for: indexPath) as! TableViewCellWithSwitch
             
-            cell.iconView.image = UIImage(named: self.imagesArray[indexPath.row] as! String);
+            cell.iconView.image = UIImage(named: item.imageName)
             
-            cell.label.text = self.itemsArray[indexPath.row] as? String
-            
-            cell.label.text = (cell.label.text)! + String(accueilModel.duplication)
+            cell.label.text = "\(item.title)\(accueilModel.duplication ? NSLocalizedString("ACCUEIL_VIEW_YES", comment: "") : NSLocalizedString("ACCUEIL_VIEW_NO", comment: ""))"
             
             cell.switchObject.isOn = accueilModel.duplication
             
@@ -124,49 +143,37 @@ class AccueilViewController: BaseViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.stepperCellId, for: indexPath) as! TableViewCellWithStepper
         
-        cell.iconView.image = UIImage(named: self.imagesArray[indexPath.row] as! String);
+        cell.iconView.image = UIImage(named: item.imageName);
         
-        cell.label.text = self.itemsArray[indexPath.row] as? String
+        cell.stepper.minimumValue = Double(item.minValue)
+        cell.stepper.maximumValue = Double(item.maxValue)
+        cell.stepper.stepValue = Double(item.stepValue)
         
         if (indexPath.row == 0)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.nbBalls)
-            
-            cell.stepper.minimumValue = 1
-            cell.stepper.maximumValue = 100
+            cell.label.text = "\(item.title)\(accueilModel.nbBalls)"
             cell.stepper.value = Double(accueilModel.nbBalls)
             
             cell.stepper.addTarget(self, action:#selector(self.stepperNumberBallsActionListener(_:)), for:UIControlEvents.touchUpInside)
         }
         else if (indexPath.row == 1)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.speed)
-            
-            cell.stepper.minimumValue = 1
-            cell.stepper.maximumValue = 5
+            cell.label.text = "\(item.title)\(accueilModel.speed)"
             cell.stepper.value = Double(accueilModel.speed)
             
             cell.stepper.addTarget(self, action:#selector(self.stepperVitesseActionListener(_:)), for:UIControlEvents.touchUpInside)
         }
         else if (indexPath.row == 3)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.size) + "x" + String(accueilModel.size)
-            
-            cell.stepper.minimumValue = 5
-            cell.stepper.maximumValue = 50
+            cell.label.text = "\(item.title)\(accueilModel.size)x\(accueilModel.size)"
             cell.stepper.value = Double(accueilModel.size)
-            cell.stepper.stepValue = 5
             
             cell.stepper.addTarget(self, action:#selector(self.stepperTailleActionListener(_:)), for:UIControlEvents.touchUpInside)
         }
         else if (indexPath.row == 4)
         {
-            cell.label.text = (cell.label.text)! + String(accueilModel.nbMaxBalls)
-            
-            cell.stepper.minimumValue = 10
-            cell.stepper.maximumValue = 10000
+            cell.label.text = "\(item.title)\(accueilModel.nbMaxBalls)"
             cell.stepper.value = Double(accueilModel.nbMaxBalls)
-            cell.stepper.stepValue = 10
             
             cell.stepper.addTarget(self, action:#selector(self.stepperNombreMaxBallsActionListener(_:)), for:UIControlEvents.touchUpInside)
         }

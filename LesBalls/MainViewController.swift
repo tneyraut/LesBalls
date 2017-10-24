@@ -19,7 +19,7 @@ class MainViewController: BaseViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Les Balls"
+        self.title = NSLocalizedString("MAIN_VIEW_TITLE", comment: "")
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(touch))
         self.view.addGestureRecognizer(gesture)
@@ -31,7 +31,7 @@ class MainViewController: BaseViewController
     {
         self.navigationController?.setToolbarHidden(false, animated:true)
         
-        compteur = addCenterButtonInToolBar(title: "Compteur : " + String(self.ballsArray.count), target: nil, selector: nil)
+        compteur = addCenterButtonInToolBar(title: "\(NSLocalizedString("MAIN_VIEW_COUNT", comment: "")) \(self.ballsArray.count)", target: nil, selector: nil)
         
         super.viewDidAppear(animated)
     }
@@ -78,7 +78,7 @@ class MainViewController: BaseViewController
     {
         self.ballsArray.add(ball)
         
-        self.compteur?.title = "Compteur : " + String(self.ballsArray.count)
+        self.compteur?.title = "\(NSLocalizedString("MAIN_VIEW_COUNT", comment: "")) \(self.ballsArray.count)"
     }
     
     fileprivate func clearAllBalls()

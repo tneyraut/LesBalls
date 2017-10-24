@@ -8,11 +8,11 @@
 
 class MainModel
 {
-    var nbBalls : Int?
-    var duplication : Bool?
-    var speed : Int?
-    var size : Int?
-    var nbMaxBalls : Int?
+    var nbBalls : Int
+    var duplication : Bool
+    var speed : Int
+    var size : Int
+    var nbMaxBalls : Int
     
     init(nbBalls: Int, duplication: Bool, speed: Int, size: Int, nbMaxBalls: Int)
     {

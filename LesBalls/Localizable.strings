@@ -9,19 +9,12 @@
 "ACCUEIL_VIEW_NB_MAX_BALLS" = "Nombre max de balls : ";
 "ACCUEIL_VIEW_TITLE" = "Les Balls : Menu Principal";
 "ACCUEIL_VIEW_LAUNCH" = "Lancer";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
-"ACCUEIL_VIEW_" = "";
+"ACCUEIL_VIEW_YES" = "Oui";
+"ACCUEIL_VIEW_NO" = "Non";
 
-
+// MAIN_VIEW
+"MAIN_VIEW_TITLE" = "Les Balls";
+"MAIN_VIEW_COUNT" = "Compteur :";
 
 // IMAGE NAME
 "ICON_BALL_BLEU1" = "rondBleu1.png";

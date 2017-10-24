@@ -8,9 +8,9 @@
 
 class AccueilModel
 {
-    var nbBalls = 1
-    var speed = 1
-    var duplication = true
-    var size = 10
-    var nbMaxBalls = 20
+    var nbBalls = Constants.baseNbBalls
+    var speed = Constants.baseSpeed
+    var duplication = Constants.baseDuplication
+    var size = Constants.baseSize
+    var nbMaxBalls = Constants.baseNbMaxBalls
 }
